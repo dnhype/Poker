@@ -126,7 +126,7 @@ class MouseMoverTableBased(MouseMover):
             log.warning("Moving mouse away failed")
 
     def move_mouse_away_from_buttons_jump(self):
-        x2 = int(np.round(np.random.uniform(1700, 2000, 1), 0)[0])
+        x2 = int(np.round(np.random.uniform(1700, 1000, 1), 0)[0])
         y2 = int(np.round(np.random.uniform(10, 200, 1), 0)[0])
 
         try:
@@ -136,7 +136,7 @@ class MouseMoverTableBased(MouseMover):
             else:
                 self.mouse.move(x2, y2)
         except Exception as e:
-            log.warning("Moving mouse via jump away failed" + str(e))
+            log.warning("Moving mouse via jump away failed " + str(e))
 
     def mouse_action(self, decision, topleftcorner, options=None):
         if decision == 'Check Deception':

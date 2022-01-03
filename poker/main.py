@@ -163,6 +163,7 @@ class ThreadManager(threading.Thread):
                 mouse = MouseMoverTableBased(table_dict)
                 mouse.move_mouse_away_from_buttons_jump()
 
+                log.info('Not ready, checking..')
                 ready = table.take_screenshot(True, strategy) and \
                         table.get_top_left_corner(strategy) and \
                         table.check_for_captcha(mouse) and \
@@ -266,7 +267,7 @@ class ThreadManager(threading.Thread):
 # ==== MAIN PROGRAM =====
 
 def run_poker():
-    init_logger(screenlevel=logging.INFO, filename='deepmind_pokerbot', logdir='log')
+    init_logger(screenlevel=logging.DEBUG, filename='deepmind_pokerbot', logdir='log')
     # print(f"Screenloglevel: {screenloglevel}")
     log = logging.getLogger("")
     log.info("Initializing program")

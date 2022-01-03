@@ -134,8 +134,8 @@ class StrategyHandler:
                                            "login": 'guest',
                                            "password": 'guest'}).json()[0]
         self.selected_strategy = output
-
         self.check_defaults()
+        log.info("Read Strategy Pass.")
         return True
 
     def save_strategy_genetic_algorithm(self):

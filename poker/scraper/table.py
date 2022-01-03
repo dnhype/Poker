@@ -40,7 +40,7 @@ class Table(TableScraper):
         if control == 'Direct mouse control':
             self.take_screenshot2()
             self.entireScreenPIL = self.screenshot
-
+            self.logger.debug("Screenshot taken from Direct mouse control")
         else:
             try:
                 vb = VirtualBoxController()
